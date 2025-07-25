@@ -5,4 +5,4 @@ consists of two main components:
 	-control pipelines
 	-schedule builds
 -Agents/ Minions
-	-Perform the build.
+	-Perform the build
