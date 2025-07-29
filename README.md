@@ -4,7 +4,7 @@ some important cmds:-
 - ls - provide the list of elements in the current directory
 - pwd - it tells the location for the present working directory
 - cd - change directory
-- 
+- cat - this is used to read inside content of the file.
 
 
 Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
