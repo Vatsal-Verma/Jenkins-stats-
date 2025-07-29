@@ -3,6 +3,7 @@ some important cmds:-
 - whoami - tells about the username
 - ls - provide the list of elements in the current directory
 - pwd - it tells the location for the present working directory
+- cd - change directory
 - 
 
 
@@ -28,4 +29,7 @@ consists of two main components:
    ```
    hello world
    ```
+- How to change the UI of jenkins ?
+  The ui of jenkins can be changed with the help of plugins:
+  for example the Simple UI jenkins plugin. In order to apply the ui plugins you need to config the system manager where you need to apply the url for css under the Theme platte
 
