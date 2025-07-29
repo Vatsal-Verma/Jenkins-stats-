@@ -42,4 +42,18 @@ consists of two main components:
   Even your system message and job that are done by another user remains visible.
 
 - how to config the Role base access control ?
-  There is no direct way to config the role base control for that you need to install a plugin that will help to control the role base settings for another user i.e. perms for another user. for example: another user can only build the item but can't change the configuration for that item. 
+  There is no direct way to config the role base control for that you need to install a plugin that will help to control the role base settings for another user i.e. perms for another user. for example: another user can only build the item but can't change the configuration for that item. There are mutiple things that a new user in the pipeline can i.e they can have the read perm 
+	- download the Role base authorization plugIN
+   	- go to configure global settings -> authorization -> select role base strategy -> Apply and save.
+
+- how to manage and assign roles on jenkins ?
+  Configure jenkins -> security -> Manage and assign roles -> Manage Roles
+  for example: developer role
+  I have created a role as developer and now I want to assign it to one of the user on jenkins how can i do so ?
+  
+  Configure jenkins -> security -> Manage and assign roles -> Manage Roles
+  cd ..
+  configure jenkins -> security -> Manage and assign roles -> Assign Role
+  In Assign role you can clearly see the user that are currently in the pipeline
+  click on the user you want to provide the perms. then Apply and save. 
+  
