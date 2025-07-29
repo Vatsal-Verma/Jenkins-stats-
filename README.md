@@ -1,10 +1,26 @@
-some important cmds:- 
+# some important linux cmds:- 
 - echo - displays message
 - whoami - tells about the username
 - ls - provide the list of elements in the current directory
 - pwd - it tells the location for the present working directory
 - cd - change directory
 - cat - this is used to read inside content of the file.
+- ping - this is used to check for the internet compatibility.
+  ```
+  for example: ping 8.8.8.8
+        Pinging 8.8.8.8 with 32 bytes of data:
+	Reply from 8.8.8.8: bytes=32 time=9ms TTL=119
+	Reply from 8.8.8.8: bytes=32 time=9ms TTL=119
+	Reply from 8.8.8.8: bytes=32 time=7ms TTL=119
+	Reply from 8.8.8.8: bytes=32 time=7ms TTL=119
+	
+	Ping statistics for 8.8.8.8:
+	    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+	Approximate round trip times in milli-seconds:
+	    Minimum = 7ms, Maximum = 9ms, Average = 8ms
+
+
+  ```
 
 
 Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
@@ -20,7 +36,7 @@ consists of two main components:
  jenkins -> Manage jenkins -> Mange user -> create new user 
  like so you can create a new user in jenkins easily.
 
- - how to create a job ?
+ # how to create a job ?
 	- go to create new item:
  	- click on the type of project you need to create.
   	- for example - freestyle project etc.
@@ -33,20 +49,20 @@ consists of two main components:
    ```
    hello world
    ```
-- How to change the UI of jenkins ?
+# How to change the UI of jenkins ?
   The ui of jenkins can be changed with the help of plugins:
   for example the Simple UI jenkins plugin. In order to apply the ui plugins you need to config the system manager where you need to apply the url for css under the Theme platte
 
-- Jenkins Role base Access Control (RBAC):
+# Jenkins Role base Access Control (RBAC):
   According to this the another user can config your work after login into your pipeline.
   Even your system message and job that are done by another user remains visible.
 
-- how to config the Role base access control ?
+# how to config the Role base access control ?
   There is no direct way to config the role base control for that you need to install a plugin that will help to control the role base settings for another user i.e. perms for another user. for example: another user can only build the item but can't change the configuration for that item. There are mutiple things that a new user in the pipeline can i.e they can have the read perm 
 	- download the Role base authorization plugIN
    	- go to configure global settings -> authorization -> select role base strategy -> Apply and save.
 
-- how to manage and assign roles on jenkins ?
+# how to manage and assign roles on jenkins ?
   Configure jenkins -> security -> Manage and assign roles -> Manage Roles
   for example: developer role
   I have created a role as developer and now I want to assign it to one of the user on jenkins how can i do so ?
@@ -56,4 +72,30 @@ consists of two main components:
   configure jenkins -> security -> Manage and assign roles -> Assign Role
   In Assign role you can clearly see the user that are currently in the pipeline
   click on the user you want to provide the perms. then Apply and save. 
-  
+
+
+  # how to build the jenkins test without manual building ? 
+  - This can be done by configuring the authentication token which can trigger the build remotely.
+  - steps:
+    	- go to project configuration then under the title "Build Trigger" hit build trigger remotely.
+    	- Then It will provide you the authenication token which you will concatenate with the token uri
+    	for example: you jenkins runs on server http://localhost:8080/
+
+    	```
+    	LOCAL_HOST/job/test-token/build?token=TOKEN_NAME
+    	http://localhost:8080/job/test-token/build?token=TOKEN_NAME
+    
+    	```
+    - problem in this:
+      The main problem which is occuring because of the build trigger is that we are not able to run/ Build the test on the prompt or shell
+      and return the authentication error:-
+
+      fix: use Build authentication token root (plugin)
+      here the url changes a litle bit, but with this method you can build your job easily without any authentication failure.
+
+      ```
+      ${localhost_url}/buildByToken/build?job=RevolutionTest&token=${token_name}
+      http://localhost:8080/buildByToken/build?job=test-token&token=toz
+      
+      ```
+    
