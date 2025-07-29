@@ -16,6 +16,10 @@ consists of two main components:
 -Agents/ Minions
 	-Perform the build
 
+ -how to create a user on jenkins ?
+ jenkins -> Manage jenkins -> Mange user -> create new user 
+ like so you can create a new user in jenkins easily.
+
  - how to create a job ?
 	- go to create new item:
  	- click on the type of project you need to create.
@@ -33,3 +37,9 @@ consists of two main components:
   The ui of jenkins can be changed with the help of plugins:
   for example the Simple UI jenkins plugin. In order to apply the ui plugins you need to config the system manager where you need to apply the url for css under the Theme platte
 
+- Jenkins Role base Access Control (RBAC):
+  According to this the another user can config your work after login into your pipeline.
+  Even your system message and job that are done by another user remains visible.
+
+- how to config the Role base access control ?
+  There is no direct way to config the role base control for that you need to install a plugin that will help to control the role base settings for another user i.e. perms for another user. for example: another user can only build the item but can't change the configuration for that item. 
