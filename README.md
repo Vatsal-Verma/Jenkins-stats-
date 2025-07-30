@@ -1,3 +1,5 @@
+# Jenkins
+
 # some important linux cmds:- 
 - echo - displays message
 - whoami - tells about the username
@@ -21,6 +23,8 @@
 
 
   ```
+- curl - this command is uesed to send the data to or from the server. 
+- sleep - this command is used to bring a delay before each job i.e. 5 sec delay or 10 sec delay.
 
 
 Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
@@ -81,11 +85,12 @@ consists of two main components:
     	- Then It will provide you the authenication token which you will concatenate with the token uri
     	for example: you jenkins runs on server http://localhost:8080/
 
-    	```
-    	LOCAL_HOST/job/test-token/build?token=TOKEN_NAME
-    	http://localhost:8080/job/test-token/build?token=TOKEN_NAME
-    
-    	```
+    ```
+    LOCAL_HOST/job/test-token/build?token=TOKEN_NAME
+    http://localhost:8080/job/test-token/build?token=TOKEN_NAME
+    ```
+
+  
     - problem in this:
       The main problem which is occuring because of the build trigger is that we are not able to run/ Build the test on the prompt or shell
       and return the authentication error:-
@@ -98,4 +103,39 @@ consists of two main components:
       http://localhost:8080/buildByToken/build?job=test-token&token=toz
       
       ```
-    
+      you can also do this with the help of you sh terminal without any authentication error.
+      you can just pass the uri which is created after using the Build authentication root plugin that you need to pass with the curl in sh.
+
+      ```
+      curl http://localhost:8080/buildByToken/build?job=test-token&token=toz
+      ```
+
+      problem: This cmmd won't work as it is. This is because of the '&' special character.
+      fix: you need to replace '&' with '\&' in order to fix this problem.
+      ```
+      curl http://localhost:8080/buildByToken/build?job=test-token\&token=toz
+      ```
+# Jenkins upstream and downstream 
+
+  upstream is used to build a job before the current job is build. 
+  downstream is used to build a job after the current job is build. 
+
+  when to use this?
+  this is used when a parent job require to trigger the child job to perform some functionality. 
+  
+  To do so you need to do as follow:-
+  jenkins configure -> Build Trigger -> mark check on the Build after other projects are built -> write your project name that you want to trigger before or after the current project -> Then mark check on build    only if the previous or ahead build is stable. 
+
+  There are other options too: 
+  1) build even if the the previous build is faild
+  2) build even if the previous build is unstable
+
+# Build trigger periodically
+  This allows you to trigger a job periodically. In this you are required to follow the cron based sytnax. To know more about the cron syntax please refer this [link](https://crontab.guru/)
+  for example: 
+
+  ```
+   H/2 * * * *
+   This will trigger the build after every 2 mins gaps. 
+  ```
+
