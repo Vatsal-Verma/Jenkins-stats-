@@ -100,20 +100,20 @@ consists of two main components:
 
       ```
       ${localhost_url}/buildByToken/build?job=RevolutionTest&token=${token_name}
-      http://localhost:8080/buildByToken/build?job=test-token&token=toz
+      http://localhost:8080/buildByToken/build?job=test-token&token={}
       
       ```
       you can also do this with the help of you sh terminal without any authentication error.
       you can just pass the uri which is created after using the Build authentication root plugin that you need to pass with the curl in sh.
 
       ```
-      curl http://localhost:8080/buildByToken/build?job=test-token&token=toz
+      curl http://localhost:8080/buildByToken/build?job=test-token&token={}
       ```
 
       problem: This cmmd won't work as it is. This is because of the '&' special character.
       fix: you need to replace '&' with '\&' in order to fix this problem.
       ```
-      curl http://localhost:8080/buildByToken/build?job=test-token\&token=toz
+      curl http://localhost:8080/buildByToken/build?job=test-token\&token={}
       ```
 # Jenkins upstream and downstream 
 
