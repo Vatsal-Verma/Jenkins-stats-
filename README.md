@@ -139,3 +139,11 @@ consists of two main components:
    This will trigger the build after every 2 mins gaps. 
   ```
 
+# Poll SCM (Source Code Management)
+  Poll SCM is another technique which is used to trigger the build. If there is any change in the base code then this build will be trigger immediately. 
+  for example:
+
+  ```
+  H/2 * * * *
+  This will check for the change in the code base in every two minutes. If it find any change in the code base then it triggers the build.
+  ```
