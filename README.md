@@ -147,3 +147,12 @@ consists of two main components:
   H/2 * * * *
   This will check for the change in the code base in every two minutes. If it find any change in the code base then it triggers the build.
   ```
+
+# Environment Variables: 
+  When you execute a build or a shell then some hidden commands are executed automatically along with it which are environment variables. for exmaple: BUILD_URL etc.
+  you can check that as follow, run the shell command as follow:
+
+  ```
+  echo "JOB_NAME"
+  echo "BUILD_ID"
+  ```
