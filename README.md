@@ -153,6 +153,6 @@ consists of two main components:
   you can check that as follow, run the shell command as follow:
 
   ```
-  echo "JOB_NAME"
-  echo "BUILD_ID"
+  echo "${JOB_NAME}"
+  echo "${BUILD_ID}"
   ```
