@@ -1,6 +1,6 @@
 # Jenkins
 
-# some important linux cmds:- 
+# some important linux cmds:
 - echo - displays message
 - whoami - tells about the username
 - ls - provide the list of elements in the current directory
