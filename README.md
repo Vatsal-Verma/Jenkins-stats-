@@ -139,6 +139,8 @@ consists of two main components:
    This will trigger the build after every 2 mins gaps. 
   ```
 
+# 
+
 # Poll SCM (Source Code Management)
   Poll SCM is another technique which is used to trigger the build. If there is any change in the base code then this build will be trigger immediately. 
   for example:
@@ -156,8 +158,39 @@ consists of two main components:
   echo "${JOB_NAME}"
   echo "${BUILD_ID}"
   ```
-#Parameterized jobs in Jenkins
- This type of job allows the user to input during the build. For doing so, you need to config the project. Go to porject -> configure -> mark select on "This project is parameterized" -> add parameters -> (configure the name of variable, it's default value if required and description if required) -> Then you'll see that whenever you build a project then the button says "build now" and after configuring the project it says "build with parameters". 
+# Parameterized jobs in Jenkins
+  This type of job allows the user to input during the build. For doing so, you need to config the project. Go to project -> configure -> mark select on "This project is parameterized" -> add parameters -> 	      (configure the name of variable, it's default value if required and description if required) -> Then you'll see that whenever you build a project then the button says "build now" and after configuring the        project it says "build with parameters". 
 
-The parameter can be a String, boolean, Integer etc.
+  The parameter can be a String, boolean, Integer, Password, multiLineString params etc. You need to enter these params before the job is build. To Verify if the params are set you need to do as follow: 
 
+  ```
+  echo "${String_param_name}"
+  echo "${boolean_param_name}"
+  echo "${multiLinedString_param_name}"
+  echo "${password_param_name}"
+  ```
+
+# Abort Build
+  According to this if the build takes more than the set time, then it aborts itself if that happens. In order to config this you need to locate as follow: jenkins job -> configure -> under Build environment       section -> click mark on "Abort Build If Stuck". if set-time < actual time taken, then the build aborts. 
+  for example: I have set time as 2 mins and I let the build sleep for 240 seconds which is 4 mins then it fails. 
+
+  ```
+  sleep 240 
+  ```
+# Add TimeStamp to the console output
+  With this function enabled you can get to know at what time what function occured. It simply shows you the actual time of execution of each step in your console output. 
+  In order to config this you need to locate as follow: jenkins job -> configure -> under Build environment section -> click mark on "Add Timestamp to the console output"
+  for example: 
+
+  ```
+  19:31:19 + echo 'My name is vatsal'
+  19:31:19 My name is vatsal 
+  19:31:19 + echo 'I'\''m a student: true'
+  19:31:19 I'm a student: true
+  19:31:19 + echo 'I'\''m 12 years old.' 
+  19:31:19 I'm 12 years old.
+  19:31:19 + cat filename
+  19:31:19 Finished: SUCCESS
+  ```
+  
+  
