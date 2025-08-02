@@ -156,3 +156,8 @@ consists of two main components:
   echo "${JOB_NAME}"
   echo "${BUILD_ID}"
   ```
+#Parameterized jobs in Jenkins
+ This type of job allows the user to input during the build. For doing so, you need to config the project. Go to porject -> configure -> mark select on "This project is parameterized" -> add parameters -> (configure the name of variable, it's default value if required and description if required) -> Then you'll see that whenever you build a project then the button says "build now" and after configuring the project it says "build with parameters". 
+
+The parameter can be a String, boolean, Integer etc.
+
