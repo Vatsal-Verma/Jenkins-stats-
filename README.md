@@ -25,7 +25,9 @@
   ```
 - curl - this command is uesed to send the data to or from the server. 
 - sleep - this command is used to bring a delay before each job i.e. 5 sec delay or 10 sec delay.
-
+- touch - it's used to create a new folder or item in the current directory.
+- mkdir - it's used to create new folder in the current directory.
+- 
 
 Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
 Jenkins is an automation platform that allows you automate platform via build, test and deploy the platform. 
