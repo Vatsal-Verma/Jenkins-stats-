@@ -192,7 +192,15 @@ consists of two main components:
   19:31:19 + echo 'I'\''m 12 years old.' 
   19:31:19 I'm 12 years old.
   19:31:19 + cat filename
-  19:31:19 Finished: SUCCESS
+  19:31:19 Finished: SUCCESSS
   ```
-  
-  
+
+# How to enable or disable a job in jenkisn ?
+  We can either enable or disable an existing job in jenkins. Sometimes the project admin does not want to let the developer or any other person to build the job. 
+  There are two ways in order to do so. 
+  way 1 - Locate to the project and click on the project --> you will find a button "disable project" click on that. 
+  once you click on the disable project then you will no longer be able to build the project i.e. the "build project" button will no longer be there on the user dashboard. 
+
+  way 2 - locate to the project then click on the project -> click on configure project -> under the description section select mark "disable this project". 
+
+  note - Once the project is disabled, you can again enable it by locating to the project and hit the "enable project" button which is based on the user dashboard itself. 
