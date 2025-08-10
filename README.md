@@ -27,7 +27,6 @@
 - sleep - this command is used to bring a delay before each job i.e. 5 sec delay or 10 sec delay.
 - touch - it's used to create a new folder or item in the current directory.
 - mkdir - it's used to create new folder in the current directory.
-- sudo apt 
 
 Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
 Jenkins is an automation platform that allows you automate platform via build, test and deploy the platform. 
@@ -204,3 +203,34 @@ consists of two main components:
   way 2 - locate to the project then click on the project -> click on configure project -> under the description section select mark "disable this project". 
 
   note - Once the project is disabled, you can again enable it by locating to the project and hit the "enable project" button which is based on the user dashboard itself. 
+
+# How to build multiple jobs concurently in jenkins ? 
+  With this you can build a particular jobs multiple times at the same time. you can achieve this with a very simple step i.e. 
+  Go to build configuration and mark the "Execute Concurrent Builds if necessary". Click on apply and save. 
+  Then you'll find that you can now build a job concurrently.
+
+# Retry count in jenkins ?
+  When this option is checked, and this project is configured to use a Source Code Management system, then Jenkins will try multiple times to check out from the specified SCM system until it succeeds.
+  The default behaviour, or if this value is set to 0 is to mark a build as failed immediately if checking out from the SCM system fails.
+  Setting this to a higher number means Jenkins will attempt to check out from the SCM system that many times, with a ten-second delay between retries.
+  If the final attempt also fails, then the build will be marked as failed, and execution will stop.
+  As plugins can contribute different Source Code Management implementations, it's up to each individual implementation to define what constitutes a checkout failure.
+  If this option is not checked, then the system-wide default value from the Configure System screen will be used.
+
+# Use Custom workspace
+  When the project is build or a project is created then a workspace is created for that project in your local machine under jenkins. You can check your workspace location by using the command as follow: 
+  ```
+  pwd
+  ```
+  output: 
+  ```
+  /c/ProgramData/Jenkins/.jenkins/workspace/custom-workspace-demo
+  ```
+  You can use your own custom workspace with by marking the check box "use custom workspace" in configure jenkins projects section. 
+  you need to provide the file location where you need to create your workspace ensuring that it's under .jenkins directory. 
+  for example: give file location as 
+  ```
+    /c/ProgramData/Jenkins/.jenkins/workspace/custom-space
+  ```
+  - when you run the ls commands before giving the location then you'll see that there is no such workspace, hence it will automatically create a workspace for you. 
+  
