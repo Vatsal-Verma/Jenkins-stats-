@@ -232,5 +232,5 @@ consists of two main components:
   ```
     /c/ProgramData/Jenkins/.jenkins/workspace/custom-space
   ```
-  - when you run the ls commands before giving the location then you'll see that there is no such workspace, hence it will automatically create a workspace for you. 
+  - when you run the ls commands before giving the location then you'll see that there is no such workspace, Hence it will automatically create a workspace for you. 
   
