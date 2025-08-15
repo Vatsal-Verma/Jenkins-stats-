@@ -234,3 +234,23 @@ consists of two main components:
   ```
   - when you run the ls commands before giving the location then you'll see that there is no such workspace, Hence it will automatically create a workspace for you. 
   
+# Building Upstream and DownStream Projects
+ - Upstream:  It allows you to trigger the job when the parent job is built. for this mark check in configure projects under trigger section "Build after other projects are built" and write the name of upstream projects in the given label.
+ -  for example: you can create two jobs, One with the name "parent" job and other with the name "child". mark "Build after other projects are built" on the child job and write the name of upstream project in the lable.
+ -  You'll check in "parent" job, there is a new section with the name Downstream project containing "child" job. In the same way the child job has a section upstream projects containing "parent".
+
+Do as follow: 
+In child job give shell cmd: 
+```
+sleep 60
+```
+
+similarly in parent job: 
+```
+sleep 60
+```
+- Here the parent job will take 60 seconds to build, once the parent job is built then downstream job will start build which will be trigged in 60s.
+---
+
+- Here if you try to trigger the build for child job while parent job is building then both the jobs will execure concurently.
+- But if you do not want the child job to build when parent job is building, then mark "Block build when upstream project is building?" which will restrict the child job to trigger the build. 
