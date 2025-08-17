@@ -3,7 +3,7 @@
 # some important linux cmds:
 - echo - displays message
 - whoami - tells about the username
-- ls - provide the list of elements in the current directory
+- ls - provides the list of elements in the current directory
 - pwd - it tells the location for the present working directory
 - cd - change directory
 - cat - this is used to read inside content of the file.
