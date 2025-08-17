@@ -236,7 +236,7 @@ consists of two main components:
   
 # Building Upstream and DownStream Projects
  - Upstream:  It allows you to trigger the job when the parent job is built. for this mark check in configure projects under trigger section "Build after other projects are built" and write the name of upstream projects in the given label.
- -  for example: you can create two jobs, One with the name "parent" job and other with the name "child". mark "Build after other projects are built" on the child job and write the name of upstream project in the lable.
+ - for example: you can create two jobs, One with the name "parent" job and other with the name "child". mark "Build after other projects are built" on the child job and write the name of upstream project in the lable.
  -  You'll check in "parent" job, there is a new section with the name Downstream project containing "child" job. In the same way the child job has a section upstream projects containing "parent".
 
 Do as follow: 
