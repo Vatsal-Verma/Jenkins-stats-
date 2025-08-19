@@ -28,7 +28,7 @@
 - touch - it's used to create a new folder or item in the current directory.
 - mkdir - it's used to create new folder in the current directory.
 
-Jenkins: ci/ cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
+Jenkins: ci/cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
 Jenkins is an automation platform that allows you automate platform via build, test and deploy the platform. 
 consists of two main components: 
 -Master Server
