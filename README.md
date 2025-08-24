@@ -215,7 +215,7 @@ consists of two main components:
   Setting this to a higher number means Jenkins will attempt to check out from the SCM system that many times, with a ten-second delay between retries.
   If the final attempt also fails, then the build will be marked as failed, and execution will stop.
   As plugins can contribute different Source Code Management implementations, it's up to each individual implementation to define what constitutes a checkout failure.
-  If this option is not checked, then the system-wide default value from the Configure System screen will be used.
+  If the option is not checked, then the system-wide default value from the Configure System screen will be used.
 
 # Use Custom workspace
   When the project is build or a project is created then a workspace is created for that project in your local machine under jenkins. You can check your workspace location by using the command as follow: 
