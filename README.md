@@ -30,6 +30,10 @@
 
 Jenkins: ci/cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
 Jenkins is an automation platform that allows you automate platform via build, test and deploy the platform. 
+
+- **Difference between Continuous Delivery and Continuous deployment.**
+  Continuous delivery prepares code for release with automated tests, making it "release-ready" for a manual deployment at any time, while continuous deployment takes this a step further by automatically deploying all code changes to production once all automated tests pass, removing the need for manual approval
+
 consists of two main components: 
 -Master Server
 	-control pipelines
@@ -40,6 +44,7 @@ consists of two main components:
  -how to create a user on jenkins ?
  jenkins -> Manage jenkins -> Mange user -> create new user 
  like so you can create a new user in jenkins easily.
+
 
  # how to create a job ?
 	- go to create new item:
@@ -253,4 +258,20 @@ sleep 60
 ---
 
 - Here if you try to trigger the build for child job while parent job is building then both the jobs will execure concurently.
-- But if you do not want the child job to build when parent job is building, then mark "Block build when upstream project is building?" which will restrict the child job to trigger the build. 
+- But if you do not want the child job to build when parent job is building, then mark "Block build when upstream project is building?" which will restrict the child job to trigger the build.
+
+# Creating your first pipeline in jenkins
+  you can create your first pipeline with the help of a plugin which is "build" pipline plugin. To can have a look above in order to understand how to download a plugin. 
+  - To Demonstrate do as follow:
+    - Create a new job and name it as parent and create another job with the name child, then go to the child project in order to select the upstream build.
+    - In order to see your pipeline you navigate to the main dashboard and then create a new view list for showing the build.
+    - you need to configure your the base project of your pipeline for the same.
+    - for example: if your upstream job is parent and downstream job is child, then you need to give the base job as in stream.
+    - as shown below:
+    - <img width="1919" height="519" alt="image" src="https://github.com/user-attachments/assets/555baeba-6c42-42db-91de-b3c01fe60198" />
+
+- In continuous deployment the test are build automatically and then goes to the deployment automatically, where as in continous delivery there is a need of manual work.
+- for example: you don't want to use the continuous deployment. Then you need to build the other jobs manually i.e. Build and test automatically and then deploy manually.
+- Here we've set the building and testing phase to continuous deployment but deployment is set to continuous delivery, which mean we need to trigger the deployment manually. 
+  <img width="1915" height="543" alt="image" src="https://github.com/user-attachments/assets/f2454f72-9cd0-4964-b517-b99f30fa5e57" />
+
