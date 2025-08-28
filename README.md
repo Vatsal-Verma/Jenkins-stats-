@@ -280,5 +280,14 @@ sleep 60
   delay or would take more time to build for the final production. 
   - You can reduce the time of building the complete pipeling by using parallel processing of different job, This will result in reduction in the time taken to build the whole project. But this will however
      increase the CPU utilization. You can also stablize the CPU utlization by doing some good practice that we'll dicuss later on.
+  - You can achieve the parallel processing by configuring the projects, set multiple projects to be build as downstream projects in the configuration of the main project. you can achieve this by navigating to 	the **Post build** Section and add multiple project seperated by commas. for example: project-1, project-2, project-3 like so. 
   - your pipeline in parallel processing will look something like this:
+  	- Before buiilding
+      <img width="1919" height="622" alt="image" src="https://github.com/user-attachments/assets/f0605d1f-dd9b-4e64-8db4-2e017c2772a6" />
+
+	- After Building
+      <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/5e4c569b-14b3-48d0-9925-89df52164f53" />
+
+      
+
     
