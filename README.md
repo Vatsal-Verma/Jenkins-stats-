@@ -288,6 +288,6 @@ sleep 60
 	- After Building
       <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/5e4c569b-14b3-48d0-9925-89df52164f53" />
 
-      
+# Parallel processing in pipeline
 
     
