@@ -270,7 +270,7 @@ sleep 60
     - as shown below:
     - <img width="1919" height="519" alt="image" src="https://github.com/user-attachments/assets/555baeba-6c42-42db-91de-b3c01fe60198" />
 
-- In continuous deployment the test are build automatically and then goes to the deployment automatically, where as in continous delivery there is a need of manual work.
+
 - for example: you don't want to use the continuous deployment. Then you need to build the other jobs manually i.e. Build and test automatically and then deploy manually.
 - Here we've set the building and testing phase to continuous deployment but deployment is set to continuous delivery, which mean we need to trigger the deployment manually. 
   <img width="1915" height="543" alt="image" src="https://github.com/user-attachments/assets/f2454f72-9cd0-4964-b517-b99f30fa5e57" />
