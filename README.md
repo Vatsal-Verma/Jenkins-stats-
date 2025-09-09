@@ -275,7 +275,7 @@ sleep 60
 - Here we've set the building and testing phase to continuous deployment but deployment is set to continuous delivery, which mean we need to trigger the deployment manually. 
   <img width="1915" height="543" alt="image" src="https://github.com/user-attachments/assets/f2454f72-9cd0-4964-b517-b99f30fa5e57" />
 
-# Parallel processing in pipeline
+# Parallel processing in pipeline :
   Whenever you run a pipeline then, it executes in a sequentail way and takes a lot of time to execute. After spending time in each step to complete, it then goes to the final production. This will result in 
   delay or would take more time to build for the final production. 
   - You can reduce the time of building the complete pipeling by using parallel processing of different job, This will result in reduction in the time taken to build the whole project. But this will however
