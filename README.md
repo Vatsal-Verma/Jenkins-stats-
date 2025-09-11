@@ -284,5 +284,5 @@ sleep 60
   - your pipeline in parallel processing will look something like this:
   	- Before buiilding
       <img width="1919" height="622" alt="image" src="https://github.com/user-attachments/assets/f0605d1f-dd9b-4e64-8db4-2e017c2772a6" />
-	- After Building
+	- After Building 
       <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/5e4c569b-14b3-48d0-9925-89df52164f53" />
