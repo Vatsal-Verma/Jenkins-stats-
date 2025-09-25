@@ -29,8 +29,7 @@
 - mkdir - it's used to create new folder in the current directory.
 - vi - helps to make changes in a file in pwd.
 - cp - it's used to copy a file.
-- 
-
+  
 Jenkins: ci/cd  -> Continuous Integration and continuous delivery, ssh -> secure shell 
 Jenkins is an automation platform that allows you automate platform via build, test and deploy the platform. 
 
