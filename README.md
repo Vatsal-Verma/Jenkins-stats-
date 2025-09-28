@@ -21,7 +21,7 @@
 	Approximate round trip times in milli-seconds:
 	    Minimum = 7ms, Maximum = 9ms, Average = 8ms
 
-
+ 
   ```
 - curl - this command is uesed to send the data to or from the server. 
 - sleep - this command is used to bring a delay before each job i.e. 5 sec delay or 10 sec delay.
