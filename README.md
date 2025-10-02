@@ -125,7 +125,7 @@ consists of two main components:
       ```
 # Jenkins upstream and downstream 
 
-  upstream is used to build a job before the current job is build. 
+  upstream is used to build a job before the current job is build.  
   downstream is used to build a job after the current job is build. 
 
   when to use this?
