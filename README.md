@@ -20,7 +20,6 @@
 	    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
 	Approximate round trip times in milli-seconds:
 	    Minimum = 7ms, Maximum = 9ms, Average = 8ms
-
  
   ```
 - curl - this command is uesed to send the data to or from the server. 
