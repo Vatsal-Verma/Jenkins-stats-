@@ -312,35 +312,35 @@ sleep 60
 
   - for multiple stages
   ```
-pipeline {
-    agent any
-
-    stages {
-        stage('Test') {
-            steps {
-                echo 'this will test, for example: mvn test'
-            }
-        }
-        
-        stage('Build') {
-            steps {
-                echo 'this will build'
-            }
-        }
-        
-        stage('deploy on test') {
-            steps {
-                echo 'this will deploy the application for reviewing mainly'
-            }
-        }
-        
-        stage('deploy on production') {
-            steps {
-                echo 'this will deploy for the final production if previous stage was build properly'
-            }
-        }
-    }
-}
+		pipeline {
+		    agent any
+		
+		    stages {
+		        stage('Test') {
+		            steps {
+		                echo 'this will test, for example: mvn test'
+		            }
+		        }
+		        
+		        stage('Build') {
+		            steps {
+		                echo 'this will build'
+		            }
+		        }
+		        
+		        stage('deploy on test') {
+		            steps {
+		                echo 'this will deploy the application for reviewing mainly'
+		            }
+		        }
+		        
+		        stage('deploy on production') {
+		            steps {
+		                echo 'this will deploy for the final production if previous stage was build properly'
+		            }
+		        }
+		    }
+		}
 
   ```
 pipeline view: 
