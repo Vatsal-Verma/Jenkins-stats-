@@ -343,3 +343,7 @@ pipeline {
 }
 
   ```
+pipeline view: 
+
+<img width="1855" height="276" alt="image" src="https://github.com/user-attachments/assets/e590fec1-36a1-4c1e-856f-f10199c8607d" />
+
