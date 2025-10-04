@@ -287,3 +287,59 @@ sleep 60
       <img width="1919" height="622" alt="image" src="https://github.com/user-attachments/assets/f0605d1f-dd9b-4e64-8db4-2e017c2772a6" />
 	- After Building 
       <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/5e4c569b-14b3-48d0-9925-89df52164f53" />
+
+# Pipeline as Code
+  we can create pipeline as code by two methods i.e. scriptive method and declarative method. 
+  sample code: 
+  ```
+	pipeline {
+	    agent any
+	
+	    stages {
+	        stage('Hello') {
+	            steps {
+	                echo 'Hello World'
+	            }
+	        }
+	    }
+	}
+
+  ```
+  here we have multiple keywords which we can classify as sections pr declaratives: 
+  `(in reference to above code)`
+  sections: pipeline, stages, steps 
+  declarative: echo etc
+
+  - for multiple stages
+  ```
+pipeline {
+    agent any
+
+    stages {
+        stage('Test') {
+            steps {
+                echo 'this will test, for example: mvn test'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'this will build'
+            }
+        }
+        
+        stage('deploy on test') {
+            steps {
+                echo 'this will deploy the application for reviewing mainly'
+            }
+        }
+        
+        stage('deploy on production') {
+            steps {
+                echo 'this will deploy for the final production if previous stage was build properly'
+            }
+        }
+    }
+}
+
+  ```
