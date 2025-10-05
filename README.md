@@ -288,6 +288,8 @@ sleep 60
 	- After Building 
       <img width="1919" height="655" alt="image" src="https://github.com/user-attachments/assets/5e4c569b-14b3-48d0-9925-89df52164f53" />
 
+---
+
 # Pipeline as Code
   we can create pipeline as code by two methods i.e. scriptive method and declarative method. 
   sample code: 
@@ -349,4 +351,39 @@ pipeline view:
 
 <img width="1837" height="279" alt="image" src="https://github.com/user-attachments/assets/81d3dc7f-bf9b-42ee-8f27-f60ed1433cff" />
 
+- Environment variable:
+  for that we need to create a environment section in the PAC as follow:
+```
+   environment{
+
+		name = 'vatsal'   <--- `this is a environment variable, global in nature.`
+
+  	}
+```
+
+- for local instance:
+  
+```
+	stage{
+
+		environment{
+			username = 'anonymous'
+		}
+
+		steps{
+			echo "this is a step for stage"
+		}
+
+	}
+```
+
+- you can also take varibles/ parameters from the user, for that we need to define `parameters` section same as `environment` section.
+
+```
+	parameters {
+
+		string(name: 'Person', defaultValue: 'Vatsal Verma', description: 'who are you' ?)
+
+	}
+```
 
