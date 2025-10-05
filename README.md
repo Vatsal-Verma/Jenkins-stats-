@@ -379,11 +379,37 @@ pipeline view:
 
 - you can also take varibles/ parameters from the user, for that we need to define `parameters` section same as `environment` section.
 
+- 1) String
+
 ```
 	parameters {
 
-		string(name: 'Person', defaultValue: 'Vatsal Verma', description: 'who are you' ?)
+		string(name: 'Person', defaultValue: 'Vatsal Verma', description: "who are you?")
 
 	}
 ```
 
+- 2) booleanParam
+     
+```
+	parameters {
+
+		booleanParam(name: 'isMale', defaultValue: 'Vatsal Verma', description: "")
+
+	}
+```
+- 3) choice
+     
+```
+	parameters {
+
+		choice(name: 'city', choices: ['japiupr', 'mumbai', 'delhi'], description: "")
+
+	}
+```
+<img width="1297" height="452" alt="image" src="https://github.com/user-attachments/assets/23381b40-b781-4ffb-bd3d-0dd264262e6e" />
+
+<img width="1007" height="420" alt="image" src="https://github.com/user-attachments/assets/ac35adcd-1370-4571-ad98-56aa855839a7" />
+
+
+     
