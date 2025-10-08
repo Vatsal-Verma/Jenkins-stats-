@@ -406,6 +406,13 @@ pipeline view:
 		choice(name: 'city', choices: ['japiupr', 'mumbai', 'delhi'], description: "")
 
 	}
+
+	parameters {
+
+		choice(name: 'gender', choices: ['male', 'female', 'others'], description: "enter your gender")
+
+	}
+
 ```
 
 <img width="1297" height="452" alt="image" src="https://github.com/user-attachments/assets/23381b40-b781-4ffb-bd3d-0dd264262e6e" />
