@@ -418,6 +418,3 @@ pipeline view:
 <img width="1297" height="452" alt="image" src="https://github.com/user-attachments/assets/23381b40-b781-4ffb-bd3d-0dd264262e6e" />
 
 <img width="1007" height="420" alt="image" src="https://github.com/user-attachments/assets/ac35adcd-1370-4571-ad98-56aa855839a7" />
-
-
-     
