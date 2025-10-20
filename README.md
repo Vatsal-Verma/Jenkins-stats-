@@ -413,7 +413,6 @@ pipeline view:
 
 	}
 
-```
 	parameters {
 
 		choice(name: 'city', choices: ['japiupr', 'mumbai', 'delhi'], description: "")
