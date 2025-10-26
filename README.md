@@ -32,7 +32,6 @@ consists of two main components:
  jenkins -> Manage jenkins -> Mange user -> create new user 
  like so you can create a new user in jenkins easily.
 
-
  # how to create a job ?
 	- go to create new item:
  	- click on the type of project you need to create.
