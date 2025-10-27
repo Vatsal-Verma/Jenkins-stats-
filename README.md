@@ -398,17 +398,6 @@ pipeline view:
 
 	}
 
-	parameters {
-
-		choice(name: 'city', choices: ['japiupr', 'mumbai', 'delhi'], description: "")
-
-	}
-
-	parameters {
-
-		choice(name: 'gender', choices: ['male', 'female', 'others'], description: "enter your gender")
-
-	}
 
 ```
 
